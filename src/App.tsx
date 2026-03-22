@@ -161,6 +161,7 @@ const App = () => {
             <img
               className="object-cover w-full h-full rounded-full overflow-hidden grayscale hover:grayscale-0 transition-all duration-500"
               src={profilePic}
+              alt="Yeremia Sutanto"
             />
           </div>
           {/* Nama dan Contact Person */}
