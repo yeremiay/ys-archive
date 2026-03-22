@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // IMPORT 1: Panggil Framer Motion
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,7 +6,7 @@ import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import ProjectCard from "./components/ProjectCard";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { faPaperPlane, faPlane } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 // IMPORT 2: Kita hapus CSS lama, kita pakai Tailwind 100%
 
@@ -21,12 +21,6 @@ const App = () => {
       document.documentElement.classList.remove("dark");
     }
   }, [isDark]);
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
 
   const projects = [
     {
@@ -81,7 +75,7 @@ const App = () => {
       y: 0, // FIXED: Selesai di posisi asli & pudar hilang
       transition: {
         duration: 0.8, // Durasi pudar 0.8 detik
-        ease: [0.16, 1, 0.3, 1], // JELASIN: Ease-out yang halus (cubic-bezier)
+        ease: [0.16, 1, 0.3, 1] as const, // JELASIN: Ease-out yang halus (cubic-bezier)
       },
     },
   };

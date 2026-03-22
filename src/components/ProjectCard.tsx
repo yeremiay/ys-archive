@@ -38,7 +38,7 @@ const ProjectCard = ({ project }: { project: any }) => (
 
       {/* TAGS: Flex gap-2 buat tag-tag kecil */}
       <div className="flex gap-2 flex-wrap">
-        {project.tags.map((tag) => (
+        {project.tags.map((tag:string) => (
           <span
             key={tag}
             className="text-[10px] uppercase tracking-widest text-zinc-700 px-3 py-1 border border-zinc-800 rounded-full font-medium
