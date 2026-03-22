@@ -7,6 +7,7 @@ import ProjectCard from "./components/ProjectCard";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import profilePic from "./assets/fp.jpg"
 
 // IMPORT 2: Kita hapus CSS lama, kita pakai Tailwind 100%
 
@@ -159,7 +160,7 @@ const App = () => {
           <div className="aspect-square">
             <img
               className="object-cover w-full h-full rounded-full overflow-hidden grayscale hover:grayscale-0 transition-all duration-500"
-              src="src/assets/fp.jpg"
+              src={profilePic}
             />
           </div>
           {/* Nama dan Contact Person */}
